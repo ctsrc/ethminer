@@ -9,7 +9,7 @@ This README is current as of commit [f27c5b584](https://github.com/ctsrc/ethmine
 For a full list of available command, please run
 
 ```sh
-cd ~/src/github.com/ethereum-mining/build/
+cd ~/src/github.com/ethereum-mining/ethminer/build/
 ./ethminer/ethminer --help
 ```
 
