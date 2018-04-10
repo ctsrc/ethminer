@@ -1,4 +1,4 @@
-# ethminer -- Ubuntu 17.10 / CUDA 9.1 / Nvidia GTX 1060 6GB
+# ethminer – Ubuntu 17.10 / CUDA 9.1 / Nvidia GTX 1060 6GB
 
 Personalized README for GPU mining with [ethereum-mining/ethminer](https://github.com/ethereum-mining/ethminer) on my workstation.
 
