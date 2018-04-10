@@ -6,11 +6,10 @@ This README is current as of commit [f27c5b584](https://github.com/ctsrc/ethmine
 
 ## Usage
 
-For a full list of available command, please run
-
 ```sh
 cd ~/src/github.com/ethereum-mining/ethminer/build/
-./ethminer/ethminer --help
+./ethminer/ethminer -U \
+  -P stratum2+tcp://3Qsz9ZbmxYojJcGxwm2KqG631yA38wt7gY.GPU:x@daggerhashimoto.eu.nicehash.com:3353
 ```
 
 ## Building from source
