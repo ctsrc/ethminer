@@ -12,7 +12,7 @@ cd ~/src/github.com/ethereum-mining/ethminer/build/
   -P stratum2+tcp://3Qsz9ZbmxYojJcGxwm2KqG631yA38wt7gY.GPU:x@daggerhashimoto.eu.nicehash.com:3353
 ```
 
-## Building from source
+## Build from source
 
 1. Install dependencies.
 
