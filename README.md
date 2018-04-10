@@ -18,7 +18,9 @@ cd ~/src/github.com/ethereum-mining/ethminer/build/
 1. Install dependencies.
 
 ```sh
-sudo apt-get install -y build-essential gcc-6 g++-6 git cmake libcrypto++-dev libleveldb-dev libjsoncpp-dev libjsonrpccpp-dev libboost-all-dev libgmp-dev libreadline-dev libcurl4-openssl-dev libmicrohttpd-dev
+sudo apt-get install -y build-essential gcc-6 g++-6 git cmake libcrypto++-dev \
+  libleveldb-dev libjsoncpp-dev libjsonrpccpp-dev libboost-all-dev libgmp-dev \
+  libreadline-dev libcurl4-openssl-dev libmicrohttpd-dev
 ```
 
 2. Install CUDA 9.1. https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1704&target_type=runfilelocal
