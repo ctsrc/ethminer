@@ -27,7 +27,7 @@ https://negativo17.org/nvidia-driver/
 ```sh
 sudo dnf config-manager --add-repo=https://negativo17.org/repos/fedora-nvidia.repo
 sudo dnf -y install nvidia-driver nvidia-settings kernel-devel akmod-nvidia
-sudo dnf -y install cuda-devel cuda-gcc cuda-gcc-c++
+sudo dnf -y install cuda-devel cuda-gcc cuda-gcc-c++ nvidia-modprobe
 ```
 
 3. Reboot
@@ -46,14 +46,14 @@ sudo dnf -y install git automake autoconf libtool cmake gcc gcc-c++ xkeyboard-co
   argtable-devel libmicrohttpd-devel
 ```
 
-```sh
-mkdir ~/build ; cd ~/build
-wget http://downloads.cpp-netlib.org/0.12.0/cpp-netlib-0.12.0-final.tar.bz2
-tar xf cpp-netlib-0.12.0-final.tar.bz2
-mkdir cpp-netlib ; cd cpp-netlib
-cmake ../cpp-netlib-0.12.0-final
-sudo make install
-```
+NOTE: Several of these are not used and instead Hunter downloads and builds them from source.
+See https://github.com/ctsrc/ethminer/commit/2d70c489271dd1dca557b60cdbd67062be6f3d67
+and also https://github.com/ethereum-mining/ethminer/issues/219
+and also https://github.com/ethereum-mining/ethminer/issues/500.
+
+Furthermore, the list is based on
+http://ethdocs.org/en/latest/ethereum-clients/cpp-ethereum/building-from-source/linux-fedora.html
+and might include dependencies that are not relevant for ethminer.
 
 5. Clone [ethereum-mining/ethminer](https://github.com/ethereum-mining/ethminer)
 
@@ -81,9 +81,7 @@ mkdir build; cd build
 ```sh
 export CC=/usr/bin/cuda-gcc
 export CXX=cuda-g++
-export PKG_CONFIG_PATH=/usr/lib64/pkgconfig
-cmake -DETHASHCL=OFF -DETHASHCUDA=ON -DHUNTER_ENABLED=OFF \
-  -DCUDA_TOOLKIT_INCLUDE_DIR=/usr/include/cuda ..
+cmake -DETHASHCL=OFF -DETHASHCUDA=ON -DCUDA_TOOLKIT_ROOT_DIR=/usr/include/cuda ..
 ```
 
 9. Build the project using [CMake Build Tool Mode].
